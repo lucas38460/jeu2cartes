@@ -1,6 +1,16 @@
-import './style.css'
+const cards = document.querySelectorAll('.cards');
+const check = document.querySelectorAll('.red');
+let count = 0;
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+for (let i = 0; i < cards.length; i++) {
+  const element = cards[i];
+  element.addEventListener('click',()=>{
+    cards[i].classList.toggle("red");
+    number(check);
+  });
+}
+
+function number(check) {
+    count++;
+  const nbrcheck = document.getElementById('nbrcheck').innerHTML = `Vous avez sélectionné ${count} cartes`;
+}
